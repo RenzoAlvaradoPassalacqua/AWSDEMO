@@ -18,6 +18,8 @@ import AWSCore
 import AWSPinpoint
 import AWSDynamoDB
 import AWSAuthCore
+import AWSAPIGateway
+
 
 // The content provider for the internal Note database (Core Data)
 
@@ -110,20 +112,23 @@ public class NotesContentProvider  {
     }
     
     func getNotesFromDDB() {
+         print("getNotesFromDDB")
+        
         // 1) Configure the query looking for all the notes created by this user (userId => Cognito identityId)
         let queryExpression = AWSDynamoDBQueryExpression()
         
-        queryExpression.keyConditionExpression = "#userId = :userId"
+        //queryExpression.keyConditionExpression = "#userId = :userId"
         
-        queryExpression.expressionAttributeNames = [
+       /* queryExpression.expressionAttributeNames = [
             "#userId": "userId",
         ]
         queryExpression.expressionAttributeValues = [
             ":userId": AWSIdentityManager.default().identityId
         ]
-        
+        */
         // 2) Make the query
-        let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
+      /*
+         let dynamoDbObjectMapper = AWSDynamoDBObjectMapper.default()
         
         dynamoDbObjectMapper.query(Notes.self, expression: queryExpression) { (output: AWSDynamoDBPaginatedOutput?, error: Error?) in
             if error != nil {
@@ -137,6 +142,14 @@ public class NotesContentProvider  {
                 }
             }
         }
+        */
+        let client = NOTESAPIMobilDemoClient._defaultClient()
+        client.rootGet("+", a: "1", b:"2").continueWithBlock {(task: AWSTask) -> AnyObject? in
+            self.showResult(task)
+            return nil
+        }
+        
+        
     }
     
     // Send analytics AddNote and DeleteNote events

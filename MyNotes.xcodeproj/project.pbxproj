@@ -10,6 +10,7 @@
 		4A8F75343F14BDF9E957E460 /* Pods_MyNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6B30B4FE6624579A9EF6C9 /* Pods_MyNotes.framework */; };
 		649FA1B820CF05D900639AA4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 649FA1B720CF05D900639AA4 /* awsconfiguration.json */; };
 		649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FA1B920CF05F500639AA4 /* Notes.swift */; };
+		64C87B3620D086DF006C2EA2 /* NOTESAPIMobilDemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B3320D086DE006C2EA2 /* NOTESAPIMobilDemoClient.swift */; };
 		F04BD3381F06EDD600303C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD3371F06EDD600303C0E /* AppDelegate.swift */; };
 		F04BD33D1F06EDD600303C0E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD33C1F06EDD600303C0E /* MasterViewController.swift */; };
 		F04BD33F1F06EDD600303C0E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD33E1F06EDD600303C0E /* DetailViewController.swift */; };
@@ -25,6 +26,9 @@
 		3912822D27AC76A329D2E227 /* Pods-MyNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes.release.xcconfig"; sourceTree = "<group>"; };
 		649FA1B720CF05D900639AA4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		649FA1B920CF05F500639AA4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		64C87B3320D086DE006C2EA2 /* NOTESAPIMobilDemoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NOTESAPIMobilDemoClient.swift; sourceTree = "<group>"; };
+		64C87B3420D086DF006C2EA2 /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
+		64C87B3520D086DF006C2EA2 /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
 		72EC1D8DE89FE071F6FD8A71 /* Pods-MyNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes.debug.xcconfig"; sourceTree = "<group>"; };
 		F04BD3341F06EDD600303C0E /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04BD3371F06EDD600303C0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		64C87B3720D086EC006C2EA2 /* ApiGatewaySDK */ = {
+			isa = PBXGroup;
+			children = (
+				64C87B3420D086DF006C2EA2 /* AWSApiGatewayBridge.h */,
+				64C87B3520D086DF006C2EA2 /* Bridging_Header.h */,
+				64C87B3320D086DE006C2EA2 /* NOTESAPIMobilDemoClient.swift */,
+			);
+			path = ApiGatewaySDK;
+			sourceTree = "<group>";
+		};
 		7F651E6C60BB5BD8E75CE85C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +102,7 @@
 		F04BD3361F06EDD600303C0E /* MyNotes */ = {
 			isa = PBXGroup;
 			children = (
+				64C87B3720D086EC006C2EA2 /* ApiGatewaySDK */,
 				F0A465041F9E968B00D609F5 /* Data */,
 				F04BD3371F06EDD600303C0E /* AppDelegate.swift */,
 				F04BD33C1F06EDD600303C0E /* MasterViewController.swift */,
@@ -208,6 +223,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAPIGateway/AWSAPIGateway.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
@@ -220,6 +236,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAPIGateway.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
@@ -247,6 +264,7 @@
 				F04BD3381F06EDD600303C0E /* AppDelegate.swift in Sources */,
 				F04BD33D1F06EDD600303C0E /* MasterViewController.swift in Sources */,
 				F04BD33F1F06EDD600303C0E /* DetailViewController.swift in Sources */,
+				64C87B3620D086DF006C2EA2 /* NOTESAPIMobilDemoClient.swift in Sources */,
 				649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +345,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = Bridging_Header.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -378,6 +397,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = Bridging_Header.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -394,12 +414,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5GD73EJG7;
 				INFOPLIST_FILE = MyNotes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.awsmobile.notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = MyNotes/ApiGatewaySDK/Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -414,12 +435,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M5GD73EJG7;
 				INFOPLIST_FILE = MyNotes/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.awsmobile.notes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = MyNotes/ApiGatewaySDK/Bridging_Header.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

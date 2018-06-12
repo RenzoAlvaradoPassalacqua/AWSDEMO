@@ -41,6 +41,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("viewDidLoad")
         _noteContentProvider?.getNotesFromDDB()
         managedObjectContext?.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
