@@ -19,6 +19,7 @@ import AWSPinpoint
 import AWSDynamoDB
 import AWSAuthCore
 import AWSAPIGateway
+ 
 
 
 // The content provider for the internal Note database (Core Data)
@@ -53,6 +54,15 @@ public class NotesContentProvider  {
             }
             print("New note was saved to DDB.")
         })
+        
+        
+        let client = NOTESAPIMobilDemoClient.default()
+        print("rootGet hhtprequest")
+        client.rootGet("awssynopsisiosdemo-mobilehub-1926081490-Notes").continueWith {(task: AWSTask) -> AnyObject? in
+            self.showResult(task: task)
+            return nil
+        }
+        
         
         return noteItem._noteId!
     }
@@ -143,12 +153,52 @@ public class NotesContentProvider  {
             }
         }
         */
-        let client = NOTESAPIMobilDemoClient._defaultClient()
-        client.rootGet("+", a: "1", b:"2").continueWithBlock {(task: AWSTask) -> AnyObject? in
-            self.showResult(task)
-            return nil
-        }
         
+        
+        
+    }
+    
+    func showResult(task: AWSTask<AnyObject>) {
+        if let error = task.error {
+            print("Error: \(error)")
+        } else if let result = task.result {
+                
+            print("res: \(result)")
+            var objOutput: NOTESOutput = NOTESOutput()
+            objOutput = (result as? NOTESOutput)!
+            
+            for notes in (objOutput.items)! {
+                
+                print (" Notes in objOutput result: \(notes) ")
+                
+               // let contentJson = notes["content"] as! String
+               
+                let noteItem: Notes = Notes()
+                
+                var notesVar: NOTESOutput_items_item = NOTESOutput_items_item()
+                notesVar = notes as! NOTESOutput_items_item
+                
+                noteItem._content = notesVar.content
+                
+              /*
+                let myInteger = Double(notesVar.creationDate!)
+                let myNumberCreationDate = NSNumber(value:myInteger!)
+                
+                let myInteger2 = Double(notesVar.updatedDate!)
+                let myNumberUpdateDate = NSNumber(value:myInteger2!)
+                */
+                
+                //noteItem._creationDate = myNumberCreationDate
+                noteItem._noteId = notesVar.noteId
+                noteItem._saldoCont = notesVar.saldoCont
+                noteItem._title = notesVar.title
+                //noteItem._updatedDate = myNumberUpdateDate
+                noteItem._userId = notesVar.userId
+                
+                print("\nNoteId: \(noteItem._noteId!)\nTitle: \(noteItem._title!)\nContent: \(noteItem._content!)")
+            }
+            
+            }
         
     }
     

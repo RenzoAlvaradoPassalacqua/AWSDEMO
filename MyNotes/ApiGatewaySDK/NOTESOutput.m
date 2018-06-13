@@ -14,5 +14,19 @@
  */
  
 
+#import "NOTESOutput.h"
 
-#import "AWSApiGatewayBridge.h"
+@implementation NOTESOutput
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"count": @"count",
+             @"items": @"Items"
+             };
+}
+
++ (NSValueTransformer *)itemsJSONTransformer {
+	return [NSValueTransformer awsmtl_JSONArrayTransformerWithModelClass:[NOTESOutput_Items_item class]];
+}
+
+@end

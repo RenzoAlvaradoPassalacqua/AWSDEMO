@@ -10,7 +10,9 @@
 		4A8F75343F14BDF9E957E460 /* Pods_MyNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6B30B4FE6624579A9EF6C9 /* Pods_MyNotes.framework */; };
 		649FA1B820CF05D900639AA4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 649FA1B720CF05D900639AA4 /* awsconfiguration.json */; };
 		649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FA1B920CF05F500639AA4 /* Notes.swift */; };
-		64C87B3620D086DF006C2EA2 /* NOTESAPIMobilDemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B3320D086DE006C2EA2 /* NOTESAPIMobilDemoClient.swift */; };
+		64C87B4B20D1A226006C2EA2 /* NOTESOutput_items_item.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B4520D1A224006C2EA2 /* NOTESOutput_items_item.m */; };
+		64C87B4C20D1A226006C2EA2 /* NOTESOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B4820D1A225006C2EA2 /* NOTESOutput.m */; };
+		64C87B4D20D1A226006C2EA2 /* NOTESAPIMobilDemoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B4A20D1A226006C2EA2 /* NOTESAPIMobilDemoClient.m */; };
 		F04BD3381F06EDD600303C0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD3371F06EDD600303C0E /* AppDelegate.swift */; };
 		F04BD33D1F06EDD600303C0E /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD33C1F06EDD600303C0E /* MasterViewController.swift */; };
 		F04BD33F1F06EDD600303C0E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04BD33E1F06EDD600303C0E /* DetailViewController.swift */; };
@@ -26,9 +28,12 @@
 		3912822D27AC76A329D2E227 /* Pods-MyNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes.release.xcconfig"; sourceTree = "<group>"; };
 		649FA1B720CF05D900639AA4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		649FA1B920CF05F500639AA4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
-		64C87B3320D086DE006C2EA2 /* NOTESAPIMobilDemoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NOTESAPIMobilDemoClient.swift; sourceTree = "<group>"; };
-		64C87B3420D086DF006C2EA2 /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
-		64C87B3520D086DF006C2EA2 /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		64C87B4520D1A224006C2EA2 /* NOTESOutput_items_item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOTESOutput_items_item.m; sourceTree = "<group>"; };
+		64C87B4620D1A224006C2EA2 /* NOTESOutput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOTESOutput.h; sourceTree = "<group>"; };
+		64C87B4720D1A225006C2EA2 /* NOTESOutput_items_item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOTESOutput_items_item.h; sourceTree = "<group>"; };
+		64C87B4820D1A225006C2EA2 /* NOTESOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOTESOutput.m; sourceTree = "<group>"; };
+		64C87B4920D1A226006C2EA2 /* NOTESAPIMobilDemoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NOTESAPIMobilDemoClient.h; sourceTree = "<group>"; };
+		64C87B4A20D1A226006C2EA2 /* NOTESAPIMobilDemoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NOTESAPIMobilDemoClient.m; sourceTree = "<group>"; };
 		72EC1D8DE89FE071F6FD8A71 /* Pods-MyNotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes.debug.xcconfig"; sourceTree = "<group>"; };
 		F04BD3341F06EDD600303C0E /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04BD3371F06EDD600303C0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,9 +71,12 @@
 		64C87B3720D086EC006C2EA2 /* ApiGatewaySDK */ = {
 			isa = PBXGroup;
 			children = (
-				64C87B3420D086DF006C2EA2 /* AWSApiGatewayBridge.h */,
-				64C87B3520D086DF006C2EA2 /* Bridging_Header.h */,
-				64C87B3320D086DE006C2EA2 /* NOTESAPIMobilDemoClient.swift */,
+				64C87B4920D1A226006C2EA2 /* NOTESAPIMobilDemoClient.h */,
+				64C87B4A20D1A226006C2EA2 /* NOTESAPIMobilDemoClient.m */,
+				64C87B4720D1A225006C2EA2 /* NOTESOutput_items_item.h */,
+				64C87B4520D1A224006C2EA2 /* NOTESOutput_items_item.m */,
+				64C87B4620D1A224006C2EA2 /* NOTESOutput.h */,
+				64C87B4820D1A225006C2EA2 /* NOTESOutput.m */,
 			);
 			path = ApiGatewaySDK;
 			sourceTree = "<group>";
@@ -261,10 +269,12 @@
 			files = (
 				F0A465081F9E96EA00D609F5 /* NotesContentProvider.swift in Sources */,
 				F08C4422201BC23E00153B38 /* Note.xcdatamodeld in Sources */,
+				64C87B4C20D1A226006C2EA2 /* NOTESOutput.m in Sources */,
+				64C87B4D20D1A226006C2EA2 /* NOTESAPIMobilDemoClient.m in Sources */,
 				F04BD3381F06EDD600303C0E /* AppDelegate.swift in Sources */,
 				F04BD33D1F06EDD600303C0E /* MasterViewController.swift in Sources */,
+				64C87B4B20D1A226006C2EA2 /* NOTESOutput_items_item.m in Sources */,
 				F04BD33F1F06EDD600303C0E /* DetailViewController.swift in Sources */,
-				64C87B3620D086DF006C2EA2 /* NOTESAPIMobilDemoClient.swift in Sources */,
 				649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +430,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = MyNotes/ApiGatewaySDK/Bridging_Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = MyNotes/ApiGatewaySDK/NOTESAPIMobilDemoClient.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -441,7 +451,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = MyNotes/ApiGatewaySDK/Bridging_Header.h;
+				SWIFT_OBJC_BRIDGING_HEADER = MyNotes/ApiGatewaySDK/NOTESAPIMobilDemoClient.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
