@@ -32,10 +32,10 @@
 @property (nonatomic, strong, nullable) NSString *userId;
 
 
-@property (nonatomic, strong, nullable) NSString *creationDate;
+@property (nonatomic, strong, nullable) NSNumber *creationDate;
 
 
-@property (nonatomic, strong, nullable) NSString *updatedDate;
+@property (nonatomic, strong, nullable) NSNumber *updatedDate;
 
 
 @property (nonatomic, strong, nullable) NSString *title;

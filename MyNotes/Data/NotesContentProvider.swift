@@ -175,24 +175,15 @@ public class NotesContentProvider  {
                
                 let noteItem: Notes = Notes()
                 
-                var notesVar: NOTESOutput_items_item = NOTESOutput_items_item()
-                notesVar = notes as! NOTESOutput_items_item
+                var notesVar: NOTESOutput_Items_item = NOTESOutput_Items_item()
+                notesVar = notes as! NOTESOutput_Items_item
                 
                 noteItem._content = notesVar.content
-                
-              /*
-                let myInteger = Double(notesVar.creationDate!)
-                let myNumberCreationDate = NSNumber(value:myInteger!)
-                
-                let myInteger2 = Double(notesVar.updatedDate!)
-                let myNumberUpdateDate = NSNumber(value:myInteger2!)
-                */
-                
-                //noteItem._creationDate = myNumberCreationDate
+                noteItem._creationDate = notesVar.creationDate
                 noteItem._noteId = notesVar.noteId
                 noteItem._saldoCont = notesVar.saldoCont
                 noteItem._title = notesVar.title
-                //noteItem._updatedDate = myNumberUpdateDate
+                noteItem._updatedDate = notesVar.updatedDate
                 noteItem._userId = notesVar.userId
                 
                 print("\nNoteId: \(noteItem._noteId!)\nTitle: \(noteItem._title!)\nContent: \(noteItem._content!)")
