@@ -21,6 +21,8 @@
 #import <AWSCore/AWSSynchronizedMutableDictionary.h>
 
 #import "NOTESOutput.h"
+#import "NOTESInsert.h"
+#import "NOTESEmpty.h"
 
 @interface AWSAPIGatewayClient()
 
@@ -168,6 +170,28 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
                   headerParameters:headerParameters
                               body:nil
                      responseClass:[NOTESOutput class]];
+}
+
+- (AWSTask *)rootPost:(NOTESInsert *)body {
+    NSDictionary *headerParameters = @{
+                                       @"Content-Type": @"application/json",
+                                       @"Accept": @"application/json",
+                                       
+                                       };
+    NSDictionary *queryParameters = @{
+                                      
+                                      };
+    NSDictionary *pathParameters = @{
+                                     
+                                     };
+    
+    return [self invokeHTTPRequest:@"POST"
+                         URLString:@"/"
+                    pathParameters:pathParameters
+                   queryParameters:queryParameters
+                  headerParameters:headerParameters
+                              body:body
+                     responseClass:[NOTESEmpty class]];
 }
 
 

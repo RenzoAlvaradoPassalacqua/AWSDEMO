@@ -19,7 +19,6 @@ import AWSPinpoint
 import AWSDynamoDB
 import AWSAuthCore
 import AWSAPIGateway
- 
 
 
 // The content provider for the internal Note database (Core Data)
@@ -44,6 +43,7 @@ public class NotesContentProvider  {
         noteItem._content = emptyContent
         noteItem._creationDate = NSDate().timeIntervalSince1970 as NSNumber
         
+        /*
         //Save a new item
         dynamoDbObjectMapper.save(noteItem, completionHandler: {
             (error: Error?) -> Void in
@@ -52,16 +52,38 @@ public class NotesContentProvider  {
                 print("Amazon DynamoDB Save Error on new note: \(error)")
                 return
             }
+            
             print("New note was saved to DDB.")
         })
         
-        
+        */
         let client = NOTESAPIMobilDemoClient.default()
-        print("rootGet hhtprequest")
-        client.rootGet("awssynopsisiosdemo-mobilehub-1926081490-Notes").continueWith {(task: AWSTask) -> AnyObject? in
+        print("rootPost hhtprequest")
+        
+        let body = NOTESInsert()
+        body?.tableName = "awssynopsisiosdemo-mobilehub-1926081490-Notes"
+        
+        let itemObj: NOTESInsert_Item_item = NOTESInsert_Item_item()
+        itemObj.userId = noteItem._userId
+        itemObj.noteId = noteItem._noteId
+        itemObj.title = noteItem._title
+        itemObj.content = noteItem._content
+        
+        var date : NSNumber = NSNumber()
+        date = NSDate().timeIntervalSince1970 as NSNumber
+        itemObj.creationDate = date
+        
+        print("  itemObj.creationDate: \(String(describing: itemObj.creationDate))")
+        
+        let itemObjArray:NSArray = NSArray()
+        itemObjArray.adding(itemObj)
+        body?.item = itemObjArray as! [NSArray]
+        
+        client.rootPost(body!).continueWith {(task: AWSTask) -> AnyObject? in
             self.showResult(task: task)
             return nil
         }
+ 
         
         
         return noteItem._noteId!
@@ -125,7 +147,7 @@ public class NotesContentProvider  {
          print("getNotesFromDDB")
         
         // 1) Configure the query looking for all the notes created by this user (userId => Cognito identityId)
-        let queryExpression = AWSDynamoDBQueryExpression()
+        //let queryExpression = AWSDynamoDBQueryExpression()
         
         //queryExpression.keyConditionExpression = "#userId = :userId"
         
@@ -153,6 +175,13 @@ public class NotesContentProvider  {
             }
         }
         */
+        
+        let client = NOTESAPIMobilDemoClient.default()
+        print("getNotesFromDDB rootGet httprequest")
+        client.rootGet("awssynopsisiosdemo-mobilehub-1926081490-Notes").continueWith {(task: AWSTask) -> AnyObject? in
+            self.showResult(task: task)
+            return nil
+        }
         
         
         

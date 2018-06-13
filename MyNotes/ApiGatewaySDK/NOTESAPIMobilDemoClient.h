@@ -18,6 +18,8 @@
 #import <AWSAPIGateway/AWSAPIGateway.h>
 
 #import "NOTESOutput.h"
+#import "NOTESInsert.h"
+#import "NOTESEmpty.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -176,6 +178,15 @@ NS_ASSUME_NONNULL_BEGIN
  return type: NOTESOutput *
  */
 - (AWSTask *)rootGet:( NSString *)tableName;
+
+/**
+ 
+ 
+ @param body 
+ 
+ return type: NOTESEmpty *
+ */
+- (AWSTask *)rootPost:( NOTESInsert *)body;
 
 @end
 
