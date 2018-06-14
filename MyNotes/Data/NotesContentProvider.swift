@@ -81,6 +81,7 @@ public class NotesContentProvider  {
         
         client.rootPost(body!).continueWith {(task: AWSTask) -> AnyObject? in
             self.showResult(task: task)
+            print("New note was saved to DDB.")
             return nil
         }
  
