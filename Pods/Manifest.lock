@@ -20,6 +20,7 @@ PODS:
   - AWSUserPoolsSignIn (2.6.21):
     - AWSAuthCore (= 2.6.21)
     - AWSCognitoIdentityProvider (= 2.6.21)
+  - SideMenu (4.0.0)
 
 DEPENDENCIES:
   - AWSAPIGateway (~> 2.6.5)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - AWSMobileClient (~> 2.6.5)
   - AWSPinpoint (~> 2.6.5)
   - AWSUserPoolsSignIn (~> 2.6.5)
+  - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -41,6 +43,7 @@ SPEC REPOS:
     - AWSMobileClient
     - AWSPinpoint
     - AWSUserPoolsSignIn
+    - SideMenu
 
 SPEC CHECKSUMS:
   AWSAPIGateway: 11bde0b08ef108be05c043eef11ab1b9084fd731
@@ -53,7 +56,8 @@ SPEC CHECKSUMS:
   AWSMobileClient: f61ef1ca52cf561a3831f4c29b8bfc43234db8f3
   AWSPinpoint: 6621f9c3de81f0fa4e7560c57b4fcc8eaeba43f0
   AWSUserPoolsSignIn: 5c2a162e62cdcb47fb0f3f5ede4dec492fc00307
+  SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
 
-PODFILE CHECKSUM: 5e6d6bec00645153426ac9b4c568a0fdcd81723f
+PODFILE CHECKSUM: 6012b5803f04a7f24641198372042bef25916168
 
 COCOAPODS: 1.5.3

@@ -16,6 +16,7 @@ import CoreData
 import AWSCore
 import AWSPinpoint
 import AWSMobileClient
+import SideMenu
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -38,7 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
+        /*
+ 
         // UISplitViewController presents a master-detail interface for Universal apps.
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
@@ -48,7 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
         let controller = masterNavigationController.topViewController as! MasterViewController
         controller.managedObjectContext = self.persistentContainer.viewContext
-        
+ 
+         */
         // Initialize AWSMobileClient
         let didFinishLaunching = AWSMobileClient.sharedInstance().interceptApplication(
             application, didFinishLaunchingWithOptions:
@@ -62,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return didFinishLaunching
     }
 
+    /*
     // MARK: - Split view
     
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
@@ -73,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         }
         return false
     }
+ */
     
     // NSPersistentContainer encapsulates the core data stack.
     lazy var persistentContainer: NSPersistentContainer = {

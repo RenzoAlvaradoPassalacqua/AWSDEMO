@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A8F75343F14BDF9E957E460 /* Pods_MyNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6B30B4FE6624579A9EF6C9 /* Pods_MyNotes.framework */; };
+		6484D7BC20DD651400B902D1 /* Side Menu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6484D7BB20DD651400B902D1 /* Side Menu.storyboard */; };
+		6484D7BE20DD81D700B902D1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7BD20DD81D700B902D1 /* DashboardViewController.swift */; };
 		649FA1B820CF05D900639AA4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 649FA1B720CF05D900639AA4 /* awsconfiguration.json */; };
 		649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FA1B920CF05F500639AA4 /* Notes.swift */; };
 		64C87B6920D1BFA8006C2EA2 /* NOTESOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B5D20D1BFA4006C2EA2 /* NOTESOutput.m */; };
@@ -29,6 +31,8 @@
 /* Begin PBXFileReference section */
 		1B6B30B4FE6624579A9EF6C9 /* Pods_MyNotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyNotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3912822D27AC76A329D2E227 /* Pods-MyNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyNotes.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes.release.xcconfig"; sourceTree = "<group>"; };
+		6484D7BB20DD651400B902D1 /* Side Menu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Side Menu.storyboard"; sourceTree = "<group>"; };
+		6484D7BD20DD81D700B902D1 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		649FA1B720CF05D900639AA4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		649FA1B920CF05F500639AA4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		64C87B5D20D1BFA4006C2EA2 /* NOTESOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NOTESOutput.m; path = "../../../api-deploy/api-get-post/aws-apigateway-ios/generated-src/NOTESOutput.m"; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		F04BD32B1F06EDD600303C0E = {
 			isa = PBXGroup;
 			children = (
+				6484D7BD20DD81D700B902D1 /* DashboardViewController.swift */,
 				F04BD3361F06EDD600303C0E /* MyNotes */,
 				F04BD3351F06EDD600303C0E /* Products */,
 				052C06CE53DAF5BD7F47A6F9 /* Pods */,
@@ -131,6 +136,7 @@
 				F04BD33C1F06EDD600303C0E /* MasterViewController.swift */,
 				F04BD33E1F06EDD600303C0E /* DetailViewController.swift */,
 				F04BD3401F06EDD600303C0E /* Main.storyboard */,
+				6484D7BB20DD651400B902D1 /* Side Menu.storyboard */,
 				F04BD3451F06EDD600303C0E /* LaunchScreen.storyboard */,
 				649FA1B720CF05D900639AA4 /* awsconfiguration.json */,
 				F04BD3431F06EDD600303C0E /* Assets.xcassets */,
@@ -213,6 +219,7 @@
 			files = (
 				649FA1B820CF05D900639AA4 /* awsconfiguration.json in Resources */,
 				F04BD3471F06EDD600303C0E /* LaunchScreen.storyboard in Resources */,
+				6484D7BC20DD651400B902D1 /* Side Menu.storyboard in Resources */,
 				F04BD3441F06EDD600303C0E /* Assets.xcassets in Resources */,
 				F04BD3421F06EDD600303C0E /* Main.storyboard in Resources */,
 			);
@@ -256,6 +263,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -269,6 +277,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -289,6 +298,7 @@
 				F04BD3381F06EDD600303C0E /* AppDelegate.swift in Sources */,
 				F04BD33D1F06EDD600303C0E /* MasterViewController.swift in Sources */,
 				64C87B6E20D1BFA8006C2EA2 /* NOTESInsert.m in Sources */,
+				6484D7BE20DD81D700B902D1 /* DashboardViewController.swift in Sources */,
 				64C87B6A20D1BFA8006C2EA2 /* NOTESInsert_Item_item.m in Sources */,
 				64C87B6920D1BFA8006C2EA2 /* NOTESOutput.m in Sources */,
 				F04BD33F1F06EDD600303C0E /* DetailViewController.swift in Sources */,
