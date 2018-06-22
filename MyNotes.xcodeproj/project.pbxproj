@@ -14,6 +14,7 @@
 		6484D7C220DD898500B902D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7C120DD898500B902D1 /* MainViewController.swift */; };
 		6484D7C420DD898F00B902D1 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7C320DD898F00B902D1 /* SideMenuTableViewController.swift */; };
 		6484D7C620DD899800B902D1 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7C520DD899700B902D1 /* PresentedViewController.swift */; };
+		6484D7C920DD9E1200B902D1 /* TransferenciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7C820DD9E1200B902D1 /* TransferenciasViewController.swift */; };
 		649FA1B820CF05D900639AA4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 649FA1B720CF05D900639AA4 /* awsconfiguration.json */; };
 		649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FA1B920CF05F500639AA4 /* Notes.swift */; };
 		64C87B6920D1BFA8006C2EA2 /* NOTESOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B5D20D1BFA4006C2EA2 /* NOTESOutput.m */; };
@@ -41,6 +42,7 @@
 		6484D7C120DD898500B902D1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6484D7C320DD898F00B902D1 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		6484D7C520DD899700B902D1 /* PresentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
+		6484D7C820DD9E1200B902D1 /* TransferenciasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferenciasViewController.swift; sourceTree = "<group>"; };
 		649FA1B720CF05D900639AA4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		649FA1B920CF05F500639AA4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		64C87B5D20D1BFA4006C2EA2 /* NOTESOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NOTESOutput.m; path = "../../../api-deploy/api-get-post/aws-apigateway-ios/generated-src/NOTESOutput.m"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				6484D7C120DD898500B902D1 /* MainViewController.swift */,
 				6484D7C320DD898F00B902D1 /* SideMenuTableViewController.swift */,
 				6484D7C520DD899700B902D1 /* PresentedViewController.swift */,
+				6484D7C820DD9E1200B902D1 /* TransferenciasViewController.swift */,
 				6484D7BF20DD894C00B902D1 /* Main2.storyboard */,
 			);
 			path = SideMenuFiles;
@@ -317,6 +320,7 @@
 				F0A465081F9E96EA00D609F5 /* NotesContentProvider.swift in Sources */,
 				F08C4422201BC23E00153B38 /* Note.xcdatamodeld in Sources */,
 				64C87B6C20D1BFA8006C2EA2 /* NOTESAPIMobilDemoClient.m in Sources */,
+				6484D7C920DD9E1200B902D1 /* TransferenciasViewController.swift in Sources */,
 				6484D7C420DD898F00B902D1 /* SideMenuTableViewController.swift in Sources */,
 				F04BD3381F06EDD600303C0E /* AppDelegate.swift in Sources */,
 				F04BD33D1F06EDD600303C0E /* MasterViewController.swift in Sources */,
