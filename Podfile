@@ -13,10 +13,20 @@ target 'MyNotes' do
 
  # Auth dependencies
       pod 'AWSUserPoolsSignIn', '~> 2.6.5'
-      pod 'AWSAuthUI', '~> 2.6.5'
-      pod 'AWSMobileClient', '~> 2.6.5'
+      pod 'AWSMobileClient', '~> 2.6.13'
+      pod 'AWSGoogleSignIn', '~> 2.6.13'
+      pod 'AWSAuthUI', '~> 2.6.13'
+      pod 'GoogleSignIn', '~> 4.0'
+      
+     
       pod 'AWSAPIGateway', '~> 2.6.5'
 
  # NoSQL Data dependencies
       pod 'AWSDynamoDB', '~> 2.6.5'
+      pod 'AWSCognito'
+      
+      
+     
+     
+      
 end

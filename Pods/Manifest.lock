@@ -6,6 +6,8 @@ PODS:
   - AWSAuthUI (2.6.21):
     - AWSAuthCore (= 2.6.21)
     - AWSCore (= 2.6.21)
+  - AWSCognito (2.6.21):
+    - AWSCore (= 2.6.21)
   - AWSCognitoIdentityProvider (2.6.21):
     - AWSCognitoIdentityProviderASF (= 1.0.1)
     - AWSCore (= 2.6.21)
@@ -13,6 +15,8 @@ PODS:
   - AWSCore (2.6.21)
   - AWSDynamoDB (2.6.21):
     - AWSCore (= 2.6.21)
+  - AWSGoogleSignIn (2.6.21):
+    - AWSAuthCore (= 2.6.21)
   - AWSMobileClient (2.6.21):
     - AWSAuthCore (= 2.6.21)
   - AWSPinpoint (2.6.21):
@@ -20,15 +24,38 @@ PODS:
   - AWSUserPoolsSignIn (2.6.21):
     - AWSAuthCore (= 2.6.21)
     - AWSCognitoIdentityProvider (= 2.6.21)
+  - GoogleSignIn (4.1.2):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMOAuth2 (~> 1.0)
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
+    - GoogleToolboxForMac/DebugUtils (= 2.1.4)
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.4)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.1.4)"
+  - GTMOAuth2 (1.1.6):
+    - GTMSessionFetcher (~> 1.1)
+  - GTMSessionFetcher (1.1.15):
+    - GTMSessionFetcher/Full (= 1.1.15)
+  - GTMSessionFetcher/Core (1.1.15)
+  - GTMSessionFetcher/Full (1.1.15):
+    - GTMSessionFetcher/Core (= 1.1.15)
   - SideMenu (4.0.0)
 
 DEPENDENCIES:
   - AWSAPIGateway (~> 2.6.5)
-  - AWSAuthUI (~> 2.6.5)
+  - AWSAuthUI (~> 2.6.13)
+  - AWSCognito
   - AWSDynamoDB (~> 2.6.5)
-  - AWSMobileClient (~> 2.6.5)
+  - AWSGoogleSignIn (~> 2.6.13)
+  - AWSMobileClient (~> 2.6.13)
   - AWSPinpoint (~> 2.6.5)
   - AWSUserPoolsSignIn (~> 2.6.5)
+  - GoogleSignIn (~> 4.0)
   - SideMenu
 
 SPEC REPOS:
@@ -36,28 +63,40 @@ SPEC REPOS:
     - AWSAPIGateway
     - AWSAuthCore
     - AWSAuthUI
+    - AWSCognito
     - AWSCognitoIdentityProvider
     - AWSCognitoIdentityProviderASF
     - AWSCore
     - AWSDynamoDB
+    - AWSGoogleSignIn
     - AWSMobileClient
     - AWSPinpoint
     - AWSUserPoolsSignIn
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMOAuth2
+    - GTMSessionFetcher
     - SideMenu
 
 SPEC CHECKSUMS:
   AWSAPIGateway: 11bde0b08ef108be05c043eef11ab1b9084fd731
   AWSAuthCore: f912e4f032092818ee21860a44386c485329a92b
   AWSAuthUI: 8549f06975c03b653e45623f19d4cb34f16f2e8f
+  AWSCognito: ddd3d4cb90dc0adb47acd199ca9bbe48ea1d18a7
   AWSCognitoIdentityProvider: 1f724c5e43528580cd9f60f0a1290888793ed473
   AWSCognitoIdentityProviderASF: f94f1a502e72ef3d0a1de93e10bf7a79c8698118
   AWSCore: a1ff1d32ea7af235fe64be301c204b34cb1f9f83
   AWSDynamoDB: 0e96aa1f06be1cdcebc384655505c162e58e2be6
+  AWSGoogleSignIn: bf452f135c5fc8fedb93fb75f10bd0ddb75add38
   AWSMobileClient: f61ef1ca52cf561a3831f4c29b8bfc43234db8f3
   AWSPinpoint: 6621f9c3de81f0fa4e7560c57b4fcc8eaeba43f0
   AWSUserPoolsSignIn: 5c2a162e62cdcb47fb0f3f5ede4dec492fc00307
+  GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
+  GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   SideMenu: 70ee5657df63ec3382660ec4ef470bf1cf5db07d
 
-PODFILE CHECKSUM: 6012b5803f04a7f24641198372042bef25916168
+PODFILE CHECKSUM: c851f844e766dbadde8ede63ca2b4a84e31870ae
 
 COCOAPODS: 1.5.3

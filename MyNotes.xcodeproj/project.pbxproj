@@ -16,6 +16,8 @@
 		6484D7C620DD899800B902D1 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7C520DD899700B902D1 /* PresentedViewController.swift */; };
 		6484D7C920DD9E1200B902D1 /* TransferenciasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7C820DD9E1200B902D1 /* TransferenciasViewController.swift */; };
 		6484D7CB20DDA87200B902D1 /* Transferencias_VerificacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6484D7CA20DDA87200B902D1 /* Transferencias_VerificacionViewController.swift */; };
+		649F178120ED6B660043E92B /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649F178020ED6B660043E92B /* SafariServices.framework */; };
+		649F178320ED6B700043E92B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 649F178220ED6B6F0043E92B /* SystemConfiguration.framework */; };
 		649FA1B820CF05D900639AA4 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 649FA1B720CF05D900639AA4 /* awsconfiguration.json */; };
 		649FA1BA20CF05F500639AA4 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649FA1B920CF05F500639AA4 /* Notes.swift */; };
 		64C87B6920D1BFA8006C2EA2 /* NOTESOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C87B5D20D1BFA4006C2EA2 /* NOTESOutput.m */; };
@@ -45,6 +47,8 @@
 		6484D7C520DD899700B902D1 /* PresentedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
 		6484D7C820DD9E1200B902D1 /* TransferenciasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferenciasViewController.swift; sourceTree = "<group>"; };
 		6484D7CA20DDA87200B902D1 /* Transferencias_VerificacionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transferencias_VerificacionViewController.swift; sourceTree = "<group>"; };
+		649F178020ED6B660043E92B /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		649F178220ED6B6F0043E92B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		649FA1B720CF05D900639AA4 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		649FA1B920CF05F500639AA4 /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		64C87B5D20D1BFA4006C2EA2 /* NOTESOutput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NOTESOutput.m; path = "../../../api-deploy/api-get-post/aws-apigateway-ios/generated-src/NOTESOutput.m"; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				649F178320ED6B700043E92B /* SystemConfiguration.framework in Frameworks */,
+				649F178120ED6B660043E92B /* SafariServices.framework in Frameworks */,
 				4A8F75343F14BDF9E957E460 /* Pods_MyNotes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +135,8 @@
 		7F651E6C60BB5BD8E75CE85C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				649F178220ED6B6F0043E92B /* SystemConfiguration.framework */,
+				649F178020ED6B660043E92B /* SafariServices.framework */,
 				1B6B30B4FE6624579A9EF6C9 /* Pods_MyNotes.framework */,
 			);
 			name = Frameworks;
@@ -193,6 +201,7 @@
 				F04BD3311F06EDD600303C0E /* Frameworks */,
 				F04BD3321F06EDD600303C0E /* Resources */,
 				D13EDF55043F88FE4789C61D /* [CP] Embed Pods Frameworks */,
+				28433C1F0766D4D5A13FF2AF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +264,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		28433C1F0766D4D5A13FF2AF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyNotes/Pods-MyNotes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8B608D062E27BCE0A74E8A2B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,13 +310,18 @@
 				"${BUILT_PRODUCTS_DIR}/AWSAPIGateway/AWSAPIGateway.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSGoogleSignIn/AWSGoogleSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -297,13 +329,18 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAPIGateway.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSGoogleSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,7 +523,7 @@
 				INFOPLIST_FILE = MyNotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.awsmobile.notes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amazon.MyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -507,7 +544,7 @@
 				INFOPLIST_FILE = MyNotes/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.awsmobile.notes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.amazon.MyNotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

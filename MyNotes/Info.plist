@@ -18,8 +18,23 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CLIENT_ID</key>
+	<string>1008881337971-abudccfp1v47gcpirfeg0k807srn8d2t.apps.googleusercontent.com</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1008881337971-abudccfp1v47gcpirfeg0k807srn8d2t</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1008881337971-abudccfp1v47gcpirfeg0k807srn8d2t</string>
+			</array>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -19,12 +19,14 @@ import AWSPinpoint
 import UIKit
 import AWSAuthCore
 import AWSAuthUI
-
+import AWSCognito
+import GoogleSignIn
+import AWSMobileClient
 /*
  * MasterViewController displays all the stored notes and allows a
  * user to create a new note, select an existing note, and swipe to delete a note.
 */
-class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate , GIDSignInUIDelegate {
 
     var _detailViewController: DetailViewController? = nil
     var _noteContentProvider: NotesContentProvider? = nil
@@ -57,6 +59,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             let controllers = split.viewControllers
             _detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        
+        
         // Instantiate sign-in UI from the SDK library
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             AWSAuthUIViewController
@@ -70,6 +74,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                                         }
                 })
         }
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        // Uncomment to automatically sign in the user.
+        //GIDSignIn.sharedInstance().signInSilently()
+        
+        // TODO(developer) Configure the sign-in button look/feel
+        // ...
+        
         
     }
 
@@ -219,5 +232,27 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
      }
      */
 
+  /*
+    // Implement these methods only if the GIDSignInUIDelegate is not a subclass of
+    // UIViewController.
+    
+    // Stop the UIActivityIndicatorView animation that was started when the user
+    // pressed the Sign In button
+    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+        myActivityIndicator.stopAnimating()
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func signIn(signIn: GIDSignIn!,
+                presentViewController viewController: UIViewController!) {
+        self.presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func signIn(signIn: GIDSignIn!,
+                dismissViewController viewController: UIViewController!) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    */
 }
 
